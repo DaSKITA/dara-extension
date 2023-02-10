@@ -1,0 +1,32 @@
+{
+  "recording": {
+    "stop": "停止录制",
+    "title": "录制中"
+  },
+  "home": {
+    "record": {
+      "title": "录制工作流",
+      "button": "录制",
+      "name": "工作流名称",
+      "selectBlock": "选择一个启动模块",
+      "anotherBlock": "无法从此模块启动",
+      "tabs": {
+        "new": "新建模块",
+        "existing": "已存在工作流"
+	    }
+    },
+    "elementSelector": {
+      "name": "元素选择器",
+      "noAccess": "您没有权限访问此站点"
+    },
+    "workflow": {
+      "new": "新建工作流",
+      "rename": "重命名工作流",
+      "delete": "删除工作流",
+      "type": {
+        "host": "主机",
+        "local": "本地",
+      }
+    },
+  }
+}

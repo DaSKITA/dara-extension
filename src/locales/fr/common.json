@@ -1,0 +1,62 @@
+{
+  "common": {
+    "dashboard": "Tableau de bord",
+    "workflow": "Workflow | Workflows",
+    "collection": "Collection | Collections",
+    "log": "Log | Logs",
+    "block": "Bloc | Blocs",
+    "docs": "Documentation",
+    "search": "Rechercher",
+    "example": "Example | Examples",
+    "import": "Importer",
+    "export": "Exporter",
+    "rename": "Renommer",
+    "execute": "Exécuter",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "settings": "Réglages",
+    "options": "Options",
+    "confirm": "Confirmer",
+    "name": "Nom",
+    "all": "Tous",
+    "add": "Ajouter",
+    "save": "Enregistrer",
+    "data": "Données",
+    "stop": "Arrêter",
+    "editor": "Éditeur",
+    "running": "En cours",
+    "globalData": "Données générales",
+    "fileName": "Nom du fichier",
+    "description": "Description",
+    "disable": "Désactiver",
+    "disabled": "Désactivé",
+    "enable": "Activer",
+    "fallback": "Fallback",
+    "update": "Mettre à jour",
+    "duplicate": "Dupliquer",
+    "password": "Mot de passe",
+    "category": "Catégorie"
+  },
+  "message": {
+    "noBlock": "Pas de bloc",
+    "noData": "Aucune donnée à afficher",
+    "noTriggerBlock": "Impossible de trouver un bloc déclencheur",
+    "useDynamicData": "Apprenez à ajouter des données dynamiques",
+    "delete": "Voulez-vous vraiment supprimer \"{name}\"?",
+    "empty": "Oupss... Il semble que vous n'ayez aucun élément",
+    "maxSizeExceeded": "La taille maximum autorisée du fichier est dépassée",
+    "notSaved": "Voulez-vous vraiment partir ? Vous avez des changements non enregistrés !",
+    "somethingWrong": "Quelque chose s'est mal passé",
+    "limitExceeded": "Vous avez dépassé la limite"
+  },
+  "sort": {
+    "sortBy": "Trier par",
+    "name": "Nom",
+    "createdAt": "Date de création"
+  },
+  "logStatus": {
+    "stopped": "arrêté",
+    "error": "erreur",
+    "success": "succès"
+  }
+}

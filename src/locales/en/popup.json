@@ -1,0 +1,32 @@
+{
+  "recording": {
+    "stop": "Stop recording",
+    "title": "Recording"
+  },
+  "home": {
+    "record": {
+      "title": "Record workflow",
+      "button": "Record",
+      "name": "Workflow name",
+      "selectBlock": "Select a block to start from",
+      "anotherBlock": "Can't start from this block",
+      "tabs": {
+        "new": "New workflow",
+        "existing": "Existing workflow"
+      }
+    },
+    "elementSelector": {
+      "name": "Element selector",
+      "noAccess": "Don't have access to this site"
+    },
+    "workflow": {
+      "new": "New workflow",
+      "rename": "Rename workflow",
+      "delete": "Delete workflow",
+      "type": {
+        "host": "Host",
+        "local": "Local"
+      }
+    }
+  }
+}

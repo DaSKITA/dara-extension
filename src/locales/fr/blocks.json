@@ -1,0 +1,464 @@
+{
+  "collection": {
+    "blocks": {
+      "export-result": {
+        "name": "Exporter le résultat",
+        "description": "Exporte le résultat de la collection au format JSON"
+      }
+    }
+  },
+  "workflow": {
+    "blocks": {
+      "base": {
+        "moveToGroup": "Déplacer le bloc vers le groupe de blocs",
+        "selector": "Sélecteur d'éléments",
+        "table": {
+          "checkbox": "Insérer dans le tableau",
+          "select": "Selectionner une colonne",
+          "extraRow": {
+            "checkbox": "Ajouter une ligne supplémentaire",
+            "placeholder": "Valeur",
+            "title": "Valeur de la ligne supplémentaire"
+          }
+        },
+        "findElement": {
+          "placeholder": "Rechercher un élément par",
+          "options": {
+            "cssSelector": "Sélecteur CSS",
+            "xpath": "XPath"
+          }
+        },
+        "markElement": {
+          "title": "Un élément ne sera pas sélectionné s'il a déjà été sélectionné avant",
+          "text": "Marquer l'élément"
+        },
+        "multiple": {
+          "title": "Sélectionner plusieurs éléments",
+          "text": "Multiple"
+        },
+        "waitSelector": {
+          "title": "Attendre le sélecteur",
+          "timeout": "Délai d'attente du sélecteur (ms)"
+        }
+      },
+      "insert-data": {
+        "name": "Insérer des données",
+        "description": "Insérer des données dans la table ou une variable"
+      },
+      "clipboard": {
+        "name": "Presse-papiers",
+        "description": "Récupérer le texte copié à partir du presse-papiers",
+        "data": "Données du presse-papiers",
+        "noPermission": "Vous n'êtes pas autorisé à accéder au presse-papiers",
+        "grantPermission": "Donner la permission"
+      },
+      "hover-element": {
+        "name": "Survoler un élément",
+        "description": "Survolez un élément"
+      },
+      "upload-file": {
+        "name": "Envoyer un fichier",
+        "description": "Envoyer le fichier dans l'élément <input type=\"file\">",
+        "filePath": "URL ou chemin d'accès au fichier",
+        "addFile": "Ajouter un fichier",
+        "requirement": "Voir les exigences avant d'utiliser ce bloc",
+        "noFileAccess": "Automa n'a pas accès aux fichiers"
+      },
+      "browser-event": {
+        "name": "Événement du navigateur",
+        "description": "Exécuter le bloc suivant lorsque l'événement est déclenché",
+        "events": "Événements",
+        "timeout": "Délai d'attente (millisecondes)",
+        "activeTabLoaded": "Onglet actif",
+        "setAsActiveTab": "Définir comme onglet actif"
+      },
+      "blocks-group": {
+        "name": "Groupe de blocs",
+        "groupName": "Nom du groupe",
+        "description": "Regroupement de blocs",
+        "dropText": "Faites glisser et déposez un bloc ici",
+        "cantAdd": "Impossible d'ajouter le bloc \"{blockName}\" au groupe."
+      },
+      "trigger": {
+        "name": "Déclencheur",
+        "description": "Bloc où le workflow commencera à s'exécuter",
+        "addTime": "Ajouter une heure",
+        "selectDay": "Sélectionnez un jour",
+        "timeExist": "Vous avez déjà ajouté {time} le {day}",
+        "fixedDelay": "Délai fixe",
+        "days": [
+          "Dimanche",
+          "Lundi",
+          "Mardi",
+          "Mercredi",
+          "Jeudi",
+          "Vendredi",
+          "Samedi"
+        ],
+        "useRegex": "Utiliser une Regex",
+        "shortcut": {
+          "tooltip": "Enregistrer un raccourci",
+          "stopRecord": "Arrête d'enregistrer",
+          "checkboxTitle": "Exécuter le raccourci même lorsque vous êtes dans un élément de saisie",
+          "checkbox": "Actif dans un élément de saisie",
+          "note": "Note: le raccourci clavier ne fonctionne que lorsque vous êtes sur une page web"
+        },
+        "forms": {
+          "triggerWorkflow": "Déclencher le workflow",
+          "interval": "Intervalle (minutes)",
+          "delay": "Délai (minutes)",
+          "date": "Date",
+          "time": "Heure",
+          "url": "URL ou Regex",
+          "shortcut": "Rccourci"
+        },
+        "items": {
+          "manual": "Manuellement",
+          "interval": "Intervalle",
+          "date": "À une date précise",
+          "specific-day": "À un jour précis",
+          "visit-web": "Lorsque vous visitez un site Web",
+          "on-startup": "Au démarrage du navigateur",
+          "keyboard-shortcut": "Raccourci clavier"
+        }
+      },
+      "execute-workflow": {
+        "name": "Executer le workflow",
+        "overwriteNote": "Cela écrasera les données globales du workflow sélectionné",
+        "select": "Selectionner le workflow",
+        "executeId": "Executer l'id",
+        "description": ""
+      },
+      "google-sheets": {
+        "name": "Google sheets",
+        "description": "Lire ou mettre à jour les données Google Sheets",
+        "previewData": "Aperçu des données",
+        "firstRow": "Utilisez la première ligne comme clés",
+        "keysAsFirstRow": "Utiliser les clés comme première ligne",
+        "insertData": "Insérer des données",
+        "valueInputOption": "Option de saisie de valeur",
+        "dataFrom": {
+          "label": "Données de",
+          "options": {
+            "data-columns": "Table",
+            "custom-data": "Données personnalisées"
+          }
+        },
+        "refKey": {
+          "label": "Clé de référence (facultatif)",
+          "placeholder": "Nom de la clé"
+        },
+        "spreadsheetId": {
+          "label": "Identifiant de la feuille de calcul",
+          "link": "Découvrez comment obtenir un identifiant de feuille de calcul"
+        },
+        "range": {
+          "label": "Plage",
+          "link": "Cliquez pour voir plus d'exemple"
+        },
+        "select": {
+          "get": "Obtenir les valeurs des cellules de la feuille de calcul",
+          "update": "Mettre à jour les valeurs des cellules de la feuille de calcul"
+        }
+      },
+      "active-tab": {
+        "name": "Onglet actif",
+        "description": "Définit l'onglet actuel dans lequel vous vous trouvez en tant qu'onglet actif"
+      },
+      "proxy": {
+        "name": "Proxy",
+        "description": "Définit le proxy du navigateur",
+        "clear": "Effacer tous les proxys",
+        "bypass": {
+          "label": "Liste des contournements",
+          "note": "Utilisez des virgules (,) pour séparer les URLs"
+        }
+      },
+      "new-window": {
+        "name": "Nouvelle fenêtre",
+        "description": "Créer une nouvelle fenêtre",
+        "top": "Haut",
+        "left": "Gauche",
+        "height": "Hauteur",
+        "width": "Largeur",
+        "note": "Remarque : utilisez 0 pour désactiver",
+        "position": "Position de la fenêtre",
+        "size": "Taille de la fenêtre",
+        "windowState": {
+          "placeholder": "État de la fenêtre",
+          "options": {
+            "normal": "Normale",
+            "minimized": "Minimisée",
+            "maximized": "Maximisée",
+            "fullscreen": "Plein écran"
+          }
+        },
+        "incognito": {
+          "text": "Définir comme fenêtre de navigation privée",
+          "note": "Vous devez activer « Autoriser en navigation privée » pour que cette extension puisse utiliser l'option"
+        }
+      },
+      "go-back": {
+        "name": "Revenir en arrière",
+        "description": "Retourne à la page précédente"
+      },
+      "forward-page": {
+        "name": "Avancer",
+        "description": "Aller à la page suivante"
+      },
+      "close-tab": {
+        "name": "Fermer l'onglet",
+        "description": "",
+        "activeTab": "Ferme l'onglet actif",
+        "url": "URL ou modèle de correspondance",
+        "allWindows": "Fermez toutes les fenêtres"
+      },
+      "event-click": {
+        "name": "Cliquer sur l'élément",
+        "description": ""
+      },
+      "delay": {
+        "name": "Délai",
+        "description": "Ajoute un délai avant d'exécuter le bloc suivant",
+        "input": {
+          "title": "Délai en milliseconde",
+          "placeholder": "(milliseconde)"
+        }
+      },
+      "get-text": {
+        "name": "Obtenir le texte",
+        "description": "Obtenir le texte d'un élément",
+        "checkbox": "Enregistrer les données",
+        "includeTags": "Inclure les balises HTML",
+        "prefixText": {
+          "placeholder": "Préfixe du texte",
+          "title": "Ajouter un préfixe au texte"
+        },
+        "suffixText": {
+          "placeholder": "Suffixe du texte",
+          "title": "Ajouter un suffixe au texte"
+        }
+      },
+      "export-data": {
+        "name": "Exporter les données",
+        "description": "Exporte les colonnes de données du workflow",
+        "exportAs": "Exporter en tant que",
+        "refKey": "Clé de référence",
+        "bomHeader": "Ajouter la nomenclature UTF-8",
+        "dataToExport": {
+          "placeholder": "Données à exporter",
+          "options": {
+            "data-columns": "Table",
+            "google-sheets": "Google sheets"
+          }
+        }
+      },
+      "element-scroll": {
+        "name": "Défiler l'élément",
+        "description": "",
+        "scrollY": "Défilement vertical",
+        "scrollX": "Défilement horizontal",
+        "intoView": "Défiler dans la vue",
+        "smooth": "Défilement fluide",
+        "incScrollX": "Incrémenter le défilement horizontal",
+        "incScrollY": "Incrémenter le défilement vertical"
+      },
+      "switch-tab": {
+        "name": "Changer d'onglet",
+        "description": "Basculer entre les onglets",
+        "matchPattern": "Modèles de correspondance",
+        "url": "URL du nouvel onglet",
+        "createIfNoMatch": "Créer s'il n'y a pas de correspondance"
+      },
+      "new-tab": {
+        "name": "Nouvel onglet",
+        "description": "",
+        "url": "URL du nouvel onglet",
+        "customUserAgent": "Utiliser un User-Agent personnalisé",
+        "activeTab": "Définir comme onglet actif",
+        "tabToGroup": "Ajouter l'onglet au groupe",
+        "updatePrevTab": {
+          "title": "Utilise le nouvel onglet précédemment ouvert au lieu d'en créer un nouveau",
+          "text": "Mettre à jour l'onglet précédemment ouvert"
+        }
+      },
+      "link": {
+        "name": "Lien",
+        "description": "Ouvre le lien d'un élément"
+      },
+      "attribute-value": {
+        "name": "Valeur de l'attribut",
+        "description": "Obtenir la valeur de l'attribut d'un élément",
+        "forms": {
+          "name": "Nom de l'attribut",
+          "checkbox": "Enregistrer des données",
+          "column": "Sélectionnez la colonne",
+          "extraRow": {
+            "checkbox": "Ajouter une ligne supplémentaire",
+            "placeholder": "Valeur",
+            "title": "Valeur de la ligne supplémentaire"
+          }
+        }
+      },
+      "forms": {
+        "name": "Formulaires",
+        "description": "",
+        "selected": "Selectionné",
+        "type": "Type de formulaire",
+        "getValue": "Obtenir la valeur du formulaire",
+        "text-field": {
+          "name": "Champ de texte",
+          "value": "Valeur",
+          "clearValue": "Effacer la valeur du formulaire",
+          "delay": {
+            "placeholder": "Délai",
+            "label": "Délai de frappe (milliseconde) (0 pour désactiver)"
+          }
+        },
+        "select": {
+          "name": "Sélection"
+        },
+        "radio": {
+          "name": "Radio"
+        },
+        "checkbox": {
+          "name": "Case à cocher"
+        }
+      },
+      "repeat-task": {
+        "name": "Répéter la tâche",
+        "description": "",
+        "times": "fois",
+        "repeatFrom": "Répéter depuis"
+      },
+      "javascript-code": {
+        "name": "Code JavaScript",
+        "description": "Exécutez votre code javascript dans la page web",
+        "availabeFuncs": "Méthodes disponibles:",
+        "removeAfterExec": "Supprimer après l'exécution du bloc",
+        "modal": {
+          "tabs": {
+            "code": "Code JavaScript",
+            "preloadScript": "Script de préchargement"
+          }
+        },
+        "timeout": {
+          "placeholder": "Délai d'attente",
+          "title": "Délai d'exécution du code Javascript"
+        }
+      },
+      "trigger-event": {
+        "name": "Événement déclencheur",
+        "description": "",
+        "selectEvent": "Sélectionnez un événement"
+      },
+      "conditions": {
+        "name": "Conditions",
+        "add": "Ajouter une condition",
+        "description": "Bloc conditionnel",
+        "fallbackTitle": "Exécuté lorsque toutes les comparaisons ne répondent pas aux exigences",
+        "equals": "Égale à",
+        "gt": "Plus grand que",
+        "gte": "Plus grand que ou égal",
+        "lt": "Moins que",
+        "lte": "Moins que ou égal",
+        "ne": "Différent",
+        "contains": "Contient"
+      },
+      "element-exists": {
+        "name": "L'élément existe",
+        "description": "Vérifie si un élément existe",
+        "selector": "Sélecteur d'éléments",
+        "fallbackTitle": "Exécuté lorsque l'élément n'existe pas",
+        "throwError": "Activer une erreur si n'existe pas",
+        "tryFor": {
+          "title": "Essaye de vérifier si l'élément existe",
+          "label": "Nombre d'essai"
+        },
+        "timeout": {
+          "label": "Délai d'attente (millisecondes)",
+          "title": "Délai d'attente pour chaque essai"
+        }
+      },
+      "webhook": {
+        "name": "Requête HTTP",
+        "description": "Faire une requête HTTP",
+        "contentType": "Type de contenu",
+        "method": "Méthode de la requête",
+        "url": "URL de la requête",
+        "fallback": "Exécuter en cas d'échec ou d'erreur lors de la création de la requête HTTP",
+        "buttons": {
+          "header": "Ajouter un en-tête"
+        },
+        "timeout": {
+          "placeholder": "Délai d'exécution",
+          "title": "Délai d'exécution de la requête HTTP (ms)"
+        },
+        "tabs": {
+          "headers": "En-têtes",
+          "body": "Corps",
+          "response": "Réponse"
+        }
+      },
+      "loop-data": {
+        "name": "Boucle de données",
+        "description": "Itérer depuis les colonnes de données ou vos données personnalisées",
+        "loopId": "ID de la boucle",
+        "refKey": "Clé de référence",
+        "startIndex": "Commencer à partir de l'index",
+        "resumeLastWorkflow": "Reprendre la où la dernière éxecution s'est arrêté",
+        "modal": {
+          "fileTooLarge": "Fichier trop volumineux pour être modifié",
+          "maxFile": "La taille maximale du fichier est de 1 Mo",
+          "options": {
+            "firstRow": "Utiliser la première ligne comme clé"
+          }
+        },
+        "buttons": {
+          "clear": "Effacer les données",
+          "insert": "Insérer des données",
+          "import": "Importer un fichier"
+        },
+        "maxLoop": {
+          "title": "Nombre maximum d'itérations de la boucle",
+          "label": "Nombre maximum d'itérations (0 pour désactiver)"
+        },
+        "loopThrough": {
+          "placeholder": "Boucler depuis",
+          "fromNumber": "Depuis le nombre",
+          "toNumber": "Vers le nombre",
+          "options": {
+            "numbers": "Nombres",
+            "variable": "Variable",
+            "data-columns": "Table",
+            "table": "Table",
+            "custom-data": "Données personnalisées",
+            "google-sheets": "Google sheets",
+            "elements": "Elements"
+          }
+        }
+      },
+      "loop-breakpoint": {
+        "name": "Point d'arrêt de la boucle",
+        "description": "Pour dire où la boucle doit s'arrêter"
+      },
+      "take-screenshot": {
+        "name": "Prendre une capture d'écran",
+        "fullPage": "Prendre une capture d'écran pleine page",
+        "description": "Prend une capture d'écran de l'onglet actif",
+        "imageQuality": "Qualité de l'image",
+        "saveToColumn": "Insérer une capture d'écran dans la Table",
+        "saveToComputer": "Enregistrer la capture d'écran sur l'ordinateur"
+      },
+      "switch-to": {
+        "name": "Basculer de cadre",
+        "description": "Basculer entre la fenêtre principale et l'iframe",
+        "iframeSelector": "Sélecteur de l'élément iframe",
+        "windowTypes": {
+          "main": "Fenêtre principale",
+          "iframe": "Iframe"
+        }
+      }
+    }
+  }
+}
