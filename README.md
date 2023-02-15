@@ -3,7 +3,7 @@
 
 <img src="src/assets/images/icon-128.png" width="64"/>
 
-This Project is a fork of the Automa Browser extension and modifies it slightly, to support our DARA-Frontend under https://daskita.github.io/dara-frontend/.
+This Project is a fork of the [Automa browser extension](https://github.com/AutomaApp/automa) and modifies it slightly, to support our DARA-Frontend under https://daskita.github.io/dara-frontend/.
 
 You can download the DARA browser extension here:
 
