@@ -2,7 +2,10 @@
 # DARA-Extension
 
 <img src="src/assets/images/icon-128.png" width="64"/>
-The Data Access Request Assistant (DARA) consists of this process repository ([DARA-API](https://github.com/DaSKITA/dara-api)), this browser-extension as automation engine (DARA-Extension), and a frontend ([DARA-Frontend](https://github.com/DaSKITA/dara-frontend)). 
+The Data Access Request Assistant (DARA) consists of 
+* a process repository [DARA-API](https://github.com/DaSKITA/dara-api)
+* this browser-extension as automation engine (DARA-Extension), and 
+* a frontend [DARA-Frontend](https://github.com/DaSKITA/dara-frontend) 
 
 This Project is a fork of the [Automa browser extension](https://github.com/AutomaApp/automa) and modifies it slightly, to support automated data access request processes specified using [DARPAL](https://github.com/DaSKITA/darpal).
 
