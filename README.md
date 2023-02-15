@@ -1,12 +1,33 @@
 
 # DARA-Extension
 
-This Project is a fork of the Automa Browser extension and modifies it slightly to support our DARA-Frontend under https://daskita.github.io/dara-frontend/.
-
-Following, the original Automa readme:
-
-
 <img src="src/assets/images/icon-128.png" width="64"/>
+
+This Project is a fork of the Automa Browser extension and modifies it slightly, to support our DARA-Frontend under https://daskita.github.io/dara-frontend/.
+
+You can download the DARA browser extension here:
+
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="center">
+      <a align="center" href="https://chrome.google.com/webstore/detail/automa/heolgaalbnnelipfhbccbkdohecmaimo">
+        <img height=60px src="src/assets/images/webstore.png" alt="Chrome web store" />
+        <p align="center">Chrome Web Store</p>
+      </a>
+    </td>
+    <td valign="center">
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/dara/">
+        <img height=60px src="src/assets/images/ffaddons.png" alt="Firefox add-ons" />
+        <p align="center">Firefox Add-ons</p>
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+---
+
+Following, we kept the original Automa Readme:
 
 ## Automa
 <p>
