@@ -3,6 +3,7 @@
 
 <img src="src/assets/images/icon-128.png" width="64"/>
 The Data Access Request Assistant (DARA) consists of 
+
 * a process repository [DARA-API](https://github.com/DaSKITA/dara-api)
 * this browser-extension as automation engine (DARA-Extension), and 
 * a frontend [DARA-Frontend](https://github.com/DaSKITA/dara-frontend) 
@@ -31,6 +32,7 @@ You can download the DARA browser extension here:
 
 
 Following, we kept the original Automa Readme:
+
 ---
 
 ## Automa
