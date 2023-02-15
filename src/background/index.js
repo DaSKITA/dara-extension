@@ -4,11 +4,11 @@ import { sleep } from '@/utils/helper';
 import getFile from '@/utils/getFile';
 import automa from '@business';
 import { workflowState } from '@/workflowEngine';
+import startRecordWorkflow from '@/newtab/utils/startRecordWorkflow';
 import { registerWorkflowTrigger } from '../utils/workflowTrigger';
 import BackgroundUtils from './BackgroundUtils';
 import BackgroundWorkflowUtils from './BackgroundWorkflowUtils';
 import BackgroundEventsListeners from './BackgroundEventsListeners';
-import startRecordWorkflow from '@/newtab/utils/startRecordWorkflow';
 
 browser.alarms.onAlarm.addListener(BackgroundEventsListeners.onAlarms);
 
@@ -174,9 +174,9 @@ message.on('workflow:register', ({ triggerBlock, workflowId }) => {
 });
 message.on('recording:stop', async () => {
   try {
-    //let { recording } = await browser.storage.local.get('recording');
+    // let { recording } = await browser.storage.local.get('recording');
 
-    //browser.storage.local.set({ recording });
+    // browser.storage.local.set({ recording });
 
     await BackgroundUtils.openDashboard('', false);
     await BackgroundUtils.sendMessageToDashboard('recording:stop');
@@ -236,11 +236,11 @@ if (!isMV2) {
 
 // Dara additions start
 message.on('from-javascript', (detail, sender) => {
-  console.log('Got from-javascript event', detail);
+  // console.log('Got from-javascript event', detail);
   if (detail.type === 'to_active') {
     detail.data.workflowTabId = sender.tab.id;
-    let queryOptions = { url: ['https://daskita.github.io/dara-frontend*'] };
-    browser.tabs.query(queryOptions).then(tabs => {
+    const queryOptions = { url: ['https://daskita.github.io/dara-frontend*'] };
+    browser.tabs.query(queryOptions).then((tabs) => {
       browser.tabs.sendMessage(tabs[0].id, detail);
     });
   }
@@ -251,42 +251,49 @@ message.on('remove:tab', (tabId) => {
 
 message.on('record:workflowAtUrl', async (url) => {
   // open tab, focus, start recording
-  let newTab = await browser.tabs.create({
-    url: url
-  })
+  const newTab = await browser.tabs.create({
+    url,
+  });
 
   function handleUpdated(tabId, changeInfo, tabInfo) {
-    if (tabId == newTab.id && tabInfo.status == "complete") {
-      url = new URL(url)
-      let options = {
+    if (tabId === newTab.id && tabInfo.status === 'complete') {
+      url = new URL(url);
+      const options = {
         name: tabInfo.title || url.hostname,
-      }
+      };
       startRecordWorkflow(options);
-      BackgroundUtils.openDashboard('/recording', true, { focused: false, height: 260 });
+      BackgroundUtils.openDashboard('/recording', true, {
+        focused: false,
+        height: 260,
+      });
       browser.tabs.update(tabId, { active: true });
-      browser.windows.update(tabInfo.windowId, { focused: true })
+      browser.windows.update(tabInfo.windowId, { focused: true });
       browser.tabs.onUpdated.removeListener(handleUpdated);
     }
-  };
+  }
   browser.tabs.onUpdated.addListener(handleUpdated);
 });
 
-message.on('workflow:delete', async (id = "") => {
-  let { workflows } = await browser.storage.local.get('workflows');
+message.on('workflow:delete', async (id = '') => {
+  const { workflows } = await browser.storage.local.get('workflows');
   delete workflows[id];
-  browser.storage.local.set({ workflows: workflows })
+  browser.storage.local.set({ workflows });
 });
 
 // Update frontend when workflows is updated
 async function updateFrontendOnStorageChange(changes, area) {
-  if (area === "local") {
-    if (Object.keys(changes).includes("workflows")) {
-      let detail = {}
-      detail.data = await browser.storage.local.get('workflows')
-      detail.type = 'to_active'
-      let queryOptions = { url: ['https://daskita.github.io/dara-frontend*'] };
+  if (area === 'local') {
+    if (Object.keys(changes).includes('workflows')) {
+      const detail = {};
+      detail.data = await browser.storage.local.get('workflows');
+      detail.type = 'to_active';
+      const queryOptions = {
+        url: ['https://daskita.github.io/dara-frontend*'],
+      };
       browser.tabs.query(queryOptions).then((tabs) => {
-        browser.tabs.sendMessage(tabs[0]['id'], detail);
+        if (tabs.length >= 1 && tabs[0].id) {
+          browser.tabs.sendMessage(tabs[0].id, detail);
+        }
       });
     }
   }
