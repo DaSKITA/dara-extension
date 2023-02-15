@@ -3,7 +3,8 @@
 
 <img src="src/assets/images/icon-128.png" width="64"/>
 
-This Project is a fork of the [Automa browser extension](https://github.com/AutomaApp/automa) and modifies it slightly, to support our DARA-Frontend under https://daskita.github.io/dara-frontend/.
+This Project is a fork of the [Automa browser extension](https://github.com/AutomaApp/automa) and modifies it slightly, to support automated data access request processes specified using [DARPAL](https://github.com/DaSKITA/darpal).
+The extension is meant to be used conjointly with our [DARA-Frontend](https://github.com/DaSKITA/dara-frontend), accessible under https://daskita.github.io/dara-frontend/.
 
 You can download the DARA browser extension here:
 
